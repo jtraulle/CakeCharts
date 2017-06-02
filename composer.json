@@ -2,6 +2,7 @@
     "name": "jtraulle/cake-charts",
     "description": "CakeCharts plugin for CakePHP",
     "type": "cakephp-plugin",
+    "license": "MIT",
     "require": {
         "php": ">=7.0",
         "cakephp/cakephp": ">=3.3.2 <4.0.0"
