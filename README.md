@@ -196,7 +196,7 @@ $cherriesSold = [1322, 1825, 2615, 4109];
 echo $this->DrawChart->multilineChart([
     [$months, $appleSold, 'Apples sold', 'markers'],
     [$months, $tomatoesSold, 'Tomatoes sold', 'lines'],
-    [$months, $bananasSold],
+    [$months, $bananasSold, 'Bananas sold'],
     [$months, $cherriesSold, 'Cherries sold']
 ]);
 ```
