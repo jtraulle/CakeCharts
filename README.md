@@ -49,7 +49,7 @@ Add those lines just before closing the ```</body>``` tag in your ```src/Templat
 
 From any template :
 
-* Single series functions signatures et phpDoc:
+* Single series functions signatures and phpDoc:
 
 ```php
 <?php
@@ -72,7 +72,7 @@ $this->DrawChart->makePieChart(array $x, array $y, array $layout = [], array $co
 $this->DrawChart->makeSingleLineChart(array $x, array $y, string $mode, array $layout = [], array $configuration = [], string $id = null);
 ```
 
-* Multi series functions signatures et phpDoc:
+* Multi series functions signatures and phpDoc:
 
 ```php
 <?php
