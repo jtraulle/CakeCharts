@@ -35,7 +35,7 @@ class Trace
      */
     private $name;
     /**
-     * @var array Line type ("markers", "lines" or "markers+line")
+     * @var string Line type ("markers", "lines" or "markers+line")
      */
     private $mode;
 
@@ -65,18 +65,13 @@ class Trace
      */
     public function toArray()
     {
-        if (count($this->x) !== count($this->y)) {
-            $name = isset($this->name) ? $this->name : 'unamed';
-            throw new \Exception("Number of X axis values are not equal to number of Y axis values for <u>$name</u> series");
-        }
+        $this->checkXequalsY();
         switch ($this->type) {
             case 'bar':
                 $trace = ['x' => $this->x, 'y' => $this->y, 'type' => $this->type, 'name' => $this->name];
                 break;
             case 'scatter':
-                if (!in_array($this->mode, ['markers', 'lines', 'lines+markers', null])) {
-                    throw new \Exception('Invalid trace mode : can be either "markers", "lines" or "markers+line" ; got "' . $this->mode . '"');
-                }
+                $this->checkModeValue();
                 $trace = ['x' => $this->x, 'y' => $this->y, 'type' => $this->type, 'name' => $this->name, 'mode' => $this->mode];
                 break;
             case 'pie':
@@ -86,10 +81,33 @@ class Trace
                 throw new \Exception('Unhandled chart type : can be either "bar", "scatter" or "pie" ; got "' . $this->type . '"');
         }
 
-        if (isset($trace['name']) && $trace['name'] === null) {
-            unset($trace['name']);
-        }
-
         return $trace;
+    }
+
+    /**
+     * Makes sure that number of X values equals Y values
+     *
+     * @throws \Exception
+     * @return void
+     */
+    private function checkXequalsY()
+    {
+        if (count($this->x) !== count($this->y)) {
+            $name = isset($this->name) ? $this->name : 'unamed';
+            throw new \Exception("Number of X axis values are not equal to number of Y axis values for <u>$name</u> series");
+        }
+    }
+
+    /**
+     * Makes sure that "mode" is a valid value
+     *
+     * @throws \Exception
+     * @return void
+     */
+    private function checkModeValue()
+    {
+        if (!in_array($this->mode, ['markers', 'lines', 'lines+markers', null])) {
+            throw new \Exception('Invalid trace mode : can be either "markers", "lines" or "markers+line" ; got "' . $this->mode . '"');
+        }
     }
 }
