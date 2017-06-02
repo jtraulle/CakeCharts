@@ -70,9 +70,9 @@ From any template :
  * @param string|null $id HTML identifier of div where chart will be drawed
  * @return string The generated chart
  */
-$this->DrawChart->makeSimpleBarChart(array $x, array $y, array $layout = [], array $configuration = [], string $id = null);
-$this->DrawChart->makePieChart(array $x, array $y, array $layout = [], array $configuration = [], string $id = null);
-$this->DrawChart->makeSingleLineChart(array $x, array $y, string $mode, array $layout = [], array $configuration = [], string $id = null);
+$this->DrawChart->simpleBarChart(array $x, array $y, array $layout = [], array $configuration = [], string $id = null);
+$this->DrawChart->pieChart(array $x, array $y, array $layout = [], array $configuration = [], string $id = null);
+$this->DrawChart->singleLineChart(array $x, array $y, string $mode, array $layout = [], array $configuration = [], string $id = null);
 ```
 
 * Multi series functions signatures and phpDoc:
@@ -98,9 +98,9 @@ $this->DrawChart->makeSingleLineChart(array $x, array $y, string $mode, array $l
  * @param string|null $id HTML identifier of div where chart will be drawed
  * @return string The generated chart
  */
-$this->DrawChart->makeStackedBarChart(array $series, array $layout = [], array $configuration = [], string $id = null);
-$this->DrawChart->makeGroupedBarChart(array $series, array $layout = [], array $configuration = [], string $id = null);
-$this->DrawChart->makeMultiLineChart(array $series, array $layout = [], array $configuration = [], string $id = null);
+$this->DrawChart->stackedBarChart(array $series, array $layout = [], array $configuration = [], string $id = null);
+$this->DrawChart->groupedBarChart(array $series, array $layout = [], array $configuration = [], string $id = null);
+$this->DrawChart->multilineChart(array $series, array $layout = [], array $configuration = [], string $id = null);
 
 // $series multi-dimensional array example
 $series = [
