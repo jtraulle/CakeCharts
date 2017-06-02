@@ -1,5 +1,5 @@
 {
-    "name": "jtraulle/CakeCharts",
+    "name": "jtraulle/cake-charts",
     "description": "CakeCharts plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
