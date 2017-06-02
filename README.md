@@ -1,5 +1,10 @@
 # CakeCharts plugin for CakePHP
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jtraulle/CakeCharts/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jtraulle/CakeCharts/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/jtraulle/cake-charts/v/stable)](https://packagist.org/packages/jtraulle/cake-charts)
+[![Total Downloads](https://poser.pugx.org/jtraulle/cake-charts/downloads)](https://packagist.org/packages/jtraulle/cake-charts)
+[![License](https://poser.pugx.org/jtraulle/cake-charts/license)](https://packagist.org/packages/jtraulle/cake-charts)
+
 ## Purpose
 
 This plugin is a CakePHP wrapper for [plotly.js](https://plot.ly/javascript/) charting library. It offers you a simple way to draw charts in your CakePHP app using provided ```DrawChart``` helper without having to write Javascript.
