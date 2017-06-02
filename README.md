@@ -20,7 +20,7 @@ composer require jtraulle/cake-charts
 ```
 ### 1. Load Plugin
 
-Add this line into your ```config/bootstrap.php```
+Ensure the CakeCharts Plugin is loaded in your ```config/bootstrap.php```
 
 ```php
 <?php
@@ -29,7 +29,7 @@ Plugin::load('CakeCharts', ['autoload' => true]);
 
 ### 2. Load Helper
 
-Add this line into your ```src/View/AppView.php```
+Add this line into your ```initialize()``` function from ```src/View/AppView.php```
 
 ```php
 <?php
@@ -44,6 +44,9 @@ Add those lines just before closing the ```</body>``` tag in your ```src/Templat
     $this->fetch('cakeChartsDefinition'); ?>
 
 ```
+
+* ```cakeChartsLibrary``` view block will inject [```plotly-latest.min.js```](https://cdn.plot.ly/plotly-latest.min.js) Javascript file from Plot.ly CDN
+* ```cakeChartsDefinition``` view block will contain generated plotly.js charts
 
 ## Usage
 
