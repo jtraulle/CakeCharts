@@ -107,7 +107,8 @@ class DrawChartHelper extends Helper
                     $serie[1],
                     $type,
                     isset($serie[2]) ? $serie[2] : null,
-                    isset($serie[3]) ? $serie[3] : null
+                    isset($serie[3]) ? $serie[3] : null,
+                    isset($serie[4]) ? $serie[4] : null
                 )
             );
         }

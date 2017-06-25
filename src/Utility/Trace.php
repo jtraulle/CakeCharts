@@ -38,6 +38,10 @@ class Trace
      * @var string Line type ("markers", "lines" or "markers+line")
      */
     private $mode;
+    /**
+     * @var string Styling options for marker
+     */
+    private $marker;
 
     /**
      * Trace constructor.
@@ -48,13 +52,14 @@ class Trace
      * @param string|null $name Name of the series
      * @param string|null $mode Line type ("markers", "lines" or "markers+line")
      */
-    public function __construct(array $x, array $y, string $type, string $name = null, string $mode = null)
+    public function __construct(array $x, array $y, string $type, string $name = null, string $mode = null, array $marker = null)
     {
         $this->x = $x;
         $this->y = $y;
         $this->type = $type;
         $this->name = $name;
         $this->mode = $mode;
+        $this->marker = $marker;
     }
 
     /**
@@ -68,7 +73,7 @@ class Trace
         $this->checkXequalsY();
         switch ($this->type) {
             case 'bar':
-                $trace = ['x' => $this->x, 'y' => $this->y, 'type' => $this->type, 'name' => $this->name];
+                $trace = ['x' => $this->x, 'y' => $this->y, 'type' => $this->type, 'name' => $this->name, 'marker' => $this->marker];
                 break;
             case 'scatter':
                 $this->checkModeValue();
