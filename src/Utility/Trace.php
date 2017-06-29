@@ -51,8 +51,9 @@ class Trace
      * @param string $type Type of trace : can be either "bar", "pie" or "scatter"
      * @param string|null $name Name of the series
      * @param string|null $mode Line type ("markers", "lines" or "markers+line")
+     * @param array $marker Plot.ly option for markers
      */
-    public function __construct(array $x, array $y, string $type, string $name = null, string $mode = null, array $marker = null)
+    public function __construct(array $x, array $y, string $type, string $name = null, string $mode = null, array $marker = [])
     {
         $this->x = $x;
         $this->y = $y;
