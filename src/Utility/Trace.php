@@ -39,7 +39,7 @@ class Trace
      */
     private $mode;
     /**
-     * @var string Styling options for marker
+     * @var array Styling options for marker
      */
     private $marker;
 
