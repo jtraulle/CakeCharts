@@ -128,7 +128,7 @@ Because we all love examples !
 ```php
 <?= $this->DrawChart->simpleBarChart(
     ['Apples', 'Tomatoes', 'Bananas', 'Cherries'],
-    [38, 22, 55, 96],
+    [38, 22, 55, 96]
 ); ?>
 ```
 
